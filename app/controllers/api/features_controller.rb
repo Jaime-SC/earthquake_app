@@ -2,7 +2,7 @@ module Api
   class FeaturesController < ApplicationController
     def index
       mag_type_filters = params.dig(:filters, :mag_type)&.split(',')
-      per_page = params[:per_page]&.to_i || 10
+      per_page = params[:per_page]&.to_i || 50
       page = params[:page]&.to_i || 1
 
       earthquakes = Earthquake.all

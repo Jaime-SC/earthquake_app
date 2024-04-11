@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.2.3"
 
+# Middleware that will make Rack-based apps CORS compatible. Fork the project here: https://github.com/cyu/rack-cors
+gem 'rack-cors', '~> 2.0', '>= 2.0.2'
+
 gem 'httparty', '~> 0.21.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

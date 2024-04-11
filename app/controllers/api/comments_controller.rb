@@ -5,14 +5,14 @@ module Api
       body = params.dig(:comment, :body)
 
       if body.blank?
-        render json: { error: 'Comment body cannot be blank' }, status: :unprocessable_entity
+        render json: { error: 'El cuerpo del comentario no puede estar en blanco' }, status: :unprocessable_entity
         return
       end
 
       earthquake = Earthquake.find_by(id: feature_id)
 
       unless earthquake
-        render json: { error: 'Earthquake not found' }, status: :not_found
+        render json: { error: 'Terremoto no encontrado' }, status: :not_found
         return
       end
 

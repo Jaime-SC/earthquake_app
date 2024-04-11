@@ -19,7 +19,7 @@ module Api
       comment = earthquake.comments.new(body: params[:body])
 
       if comment.save
-        render json: { status: 'success', comment: comment }
+        render json: { status: 'exito', comment: comment }
       else
         render json: { status: 'error', message: comment.errors.full_messages.join(', ') }
       end
